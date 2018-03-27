@@ -7,4 +7,4 @@ const getInvite = () => {
   console.log(`Hello, ${actual}!`);
   return actual;
 };
-const invite = getInvite();
+export const invite = getInvite();

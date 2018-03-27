@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import actual from '..';
+import invite from '..';
