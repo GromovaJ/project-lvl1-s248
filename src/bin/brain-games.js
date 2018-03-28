@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-import invite from '..';
+import { getInvite } from '..';
+getInvite();
