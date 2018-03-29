@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-const getInvite = (message = '') => {
+export const getInvite = (message = '') => {
   console.log('Welcome to the Brain Games!');
   console.log(`${message}\n`);
   const userName = readlineSync.question('May I have your name? ');
@@ -9,7 +9,7 @@ const getInvite = (message = '') => {
   return userName;
 };
 
-export default (messageForInvite, maxCounter, getData) => {
+export const getGame = (messageForInvite, maxCounter, getData) => {
   const userName = getInvite(messageForInvite);
   for (let counter = 1; counter <= maxCounter; counter += 1) {
     const pair = getData();

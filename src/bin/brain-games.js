@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import getInvite from '..';
+import { getInvite } from '..';
 
 getInvite();

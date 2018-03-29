@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import getData from '../games/calcGame';
-import getGame from '..';
+import startGame from '../games/calcGame';
 
-getGame('What is the result of the expression?', 3, getData);
+startGame();

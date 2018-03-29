@@ -3,6 +3,13 @@ export const getRandomNumber = () => {
   return randomNumber;
 };
 
+export const isEven = (num) => {
+  if ((num % 2) === 0) {
+    return 'yes';
+  }
+  return 'no';
+};
+
 export const getSign = () => {
   let sign;
   const randomN = Math.floor((Math.random() * 3) + 1);
@@ -18,4 +25,11 @@ export const getSign = () => {
       break;
   }
   return sign;
+};
+
+export const getGcd = (num1, num2) => {
+  if (num2 === 0) {
+    return num1;
+  }
+  return getGcd(num2, num1 % num2);
 };
