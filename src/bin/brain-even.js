@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import gameStart from '../all/evenGame';
+import getData from '../games/evenGame';
+import getGame from '..';
 
-gameStart();
+getGame('Answer "yes" if number even otherwise answer "no".', 3, getData);
