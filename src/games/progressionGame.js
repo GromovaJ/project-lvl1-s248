@@ -2,39 +2,39 @@ import { cons } from 'hexlet-pairs';
 import { getGame } from '..';
 import { getRandomNumber } from '../general';
 
-const arrProgression = [];
-
 const getDataForQuestion = (
-  memberProgression, stepProgression, lengthProgression,
-  hiddenIndex, currentIndex,
+  memberPr, stepPr, lengthPr,
+  hiddenInd, currentInd, arrProgression,
 ) => {
-  if (lengthProgression === 0) return arrProgression.join(' ');
-  if (currentIndex === hiddenIndex) {
-    arrProgression.push('..');
+  if (lengthPr === 0) return arrProgression.join(' ');
+  if (currentInd !== hiddenInd) {
+    arrProgression.push(memberPr);
   } else {
-    arrProgression.push(memberProgression);
+    arrProgression.push('..');
   }
   return getDataForQuestion(
-    memberProgression + stepProgression, stepProgression, lengthProgression - 1,
-    hiddenIndex, currentIndex + 1,
+    memberPr + stepPr, stepPr, lengthPr - 1,
+    hiddenInd, currentInd + 1, arrProgression,
   );
 };
 
 const getData = () => {
-  arrProgression.length = 0;
+  const arr = [];
   const startProgression = getRandomNumber();
   const stepProgression = getRandomNumber();
   const hiddenIndex = Math.floor(Math.random() * 10);
   const lengthProgression = 10;
   const currentIndex = 0;
   const correctAnswer = startProgression + (hiddenIndex * stepProgression);
+
   const dataForQuestion = getDataForQuestion(
-    startProgression, stepProgression, lengthProgression,
-    hiddenIndex, currentIndex,
+    startProgression, stepProgression, lengthProgression, hiddenIndex,
+    currentIndex, arr,
   );
-  const x = dataForQuestion;
-  const y = `${correctAnswer}`;
-  return cons(x, y);
+
+  const question = dataForQuestion;
+  const answer = `${correctAnswer}`;
+  return cons(question, answer);
 };
 
 export default () => {
