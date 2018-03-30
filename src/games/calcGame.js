@@ -22,5 +22,5 @@ const getData = () => {
 };
 
 export default () => {
-  getGame('What is the result of the expression?', 3, getData);
+  getGame('What is the result of the expression?', getData);
 };

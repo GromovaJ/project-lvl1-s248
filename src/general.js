@@ -1,5 +1,5 @@
 export const getRandomNumber = () => {
-  const randomNumber = Math.floor((Math.random() * 100) + 1);
+  const randomNumber = Math.floor((Math.random() * 1000) + 1);
   return randomNumber;
 };
 
@@ -32,4 +32,9 @@ export const getGcd = (num1, num2) => {
     return num1;
   }
   return getGcd(num2, num1 % num2);
+};
+
+export const compareNumeric = (a, b) => {
+  if (a > b) return 1;
+  return -1;
 };

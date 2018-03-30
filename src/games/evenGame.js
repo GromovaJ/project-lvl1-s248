@@ -9,5 +9,5 @@ const getData = () => {
 };
 
 export default () => {
-  getGame('Answer "yes" if number even otherwise answer "no".', 3, getData);
+  getGame('Answer "yes" if number even otherwise answer "no".', getData);
 };

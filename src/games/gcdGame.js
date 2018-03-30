@@ -12,5 +12,5 @@ const getData = () => {
 };
 
 export default () => {
-  getGame('Find the greatest common divisor of given numbers.', 3, getData);
+  getGame('Find the greatest common divisor of given numbers.', getData);
 };

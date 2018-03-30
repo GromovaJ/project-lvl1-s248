@@ -9,8 +9,9 @@ export const getInvite = (message = '') => {
   return userName;
 };
 
-export const getGame = (messageForInvite, maxCounter, getData) => {
+export const getGame = (messageForInvite, getData) => {
   const userName = getInvite(messageForInvite);
+  const maxCounter = 3;
   for (let counter = 1; counter <= maxCounter; counter += 1) {
     const pair = getData();
     const dataForQuestion = car(pair);
